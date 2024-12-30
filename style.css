@@ -1,0 +1,239 @@
+/* Global Styles */
+body {
+  font-family: "Raleway", sans-serif;
+  color: #fff;
+  background-color: #111;
+  margin: 0;
+  padding: 0;
+}
+
+.fancy-logo {
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #e63946;
+}
+
+.fancy-title {
+  font-family: "Playfair Display", serif;
+  font-size: 3.5rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.fancy-description {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: auto;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.fancy-heading {
+  font-family: "Playfair Display", serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+/* Hero Section */
+.hero-section {
+  background: url("img/Restaurant\ cafe\ decor\ \(1\).jpg") no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+}
+
+.hero-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.hero-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+.btn-primary {
+  background-color: #e63946;
+  border: none;
+  font-size: 1rem;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #b82836;
+  transform: scale(1.05);
+}
+
+/* Shop Section */
+.shop-section img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.shop-section img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+.shop-section p {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 0.5rem;
+  color: #e63946;
+}
+
+/* About Section */
+.about-section {
+  padding: 5rem 0;
+  background-color: #f8f9fa;
+  color: #111;
+}
+
+.about-section img {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  max-width: 100%;
+  height: auto;
+}
+
+.about-section h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.about-section p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.about-section .btn-danger {
+  background-color: #e63946;
+  border: none;
+  font-size: 1rem;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.about-section .btn-danger:hover {
+  background-color: #b82836;
+  transform: scale(1.05);
+}
+
+/* menu section */
+.menu-section {
+  font-family: "Playfair Display", serif;
+  margin: 4rem 0;
+  text-align: center;
+}
+.menu-section h2 {
+  font-size: 2.5rem;
+  color: #d9534f;
+  margin-bottom: 1.5rem;
+}
+.menu-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+.menu-item {
+  background: #111;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  max-width: 200px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.menu-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 12px rgba(255, 255, 255, 0.15);
+}
+.menu-item img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 2px solid #d9534f;
+  margin-top: 1rem;
+}
+.menu-item h3 {
+  font-size: 1.2rem;
+  color: #d9534f;
+  margin: 1rem 0 0.5rem;
+}
+.menu-item p {
+  font-size: 1rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+footer {
+  background-color: #111;
+  color: #fff;
+  padding: 1rem 0;
+  text-align: center;
+  margin-top: 4rem;
+}
+/* Reservation*/
+.reservation-container {
+  font-family: "Playfair Display", serif;
+  max-width: 600px;
+  margin: 4rem auto;
+  background: #111;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(202, 199, 199, 0.1);
+}
+.reservation-container h1 {
+  color: #d9534f;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.form-label {
+  color: #fff;
+}
+.btn-primary {
+  background-color: #d9534f;
+  border: none;
+}
+.btn-primary:hover {
+  background-color: #b52b2a;
+}
+/* Footer */
+footer {
+  background-color: #111;
+  color: #ccc;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* Navbar */
+.navbar-dark .navbar-nav .nav-link {
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #e63946;
+}
