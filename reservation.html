@@ -40,32 +40,33 @@
     </nav>
 
     <!-- Reservation Form -->
+    <form name="Reservation">
     <div class="reservation-container">
       <h1>Reservation</h1>
       <form>
         <div class="mb-3">
           <label for="name" class="form-label">Name</label>
-          <input type="text" class="form-control" id="name" placeholder="Enter your name" required />
+          <input type="text" class="form-control" id="name" placeholder="Enter your name" required name="name" />
         </div>
         <div class="mb-3">
           <label for="email" class="form-label">Email</label>
-          <input type="email" class="form-control" id="email" placeholder="Enter your email" required />
+          <input type="email" class="form-control" id="email" placeholder="Enter your email" required  name="email"/>
         </div>
         <div class="mb-3">
           <label for="date" class="form-label">Date</label>
-          <input type="date" class="form-control" id="date" required />
+          <input type="date" class="form-control" id="date" required name="date" />
         </div>
         <div class="mb-3">
           <label for="time" class="form-label">Time</label>
-          <input type="time" class="form-control" id="time" required />
+          <input type="time" class="form-control" id="time" required name="time"/>
         </div>
         <div class="mb-3">
           <label for="people" class="form-label">Number of People</label>
-          <input type="number" class="form-control" id="people" min="1" placeholder="Enter number of people" required />
+          <input type="text" class="form-control" id="people" min="1" placeholder="Enter number of people" required name="people"/>
         </div>
         <div class="mb-3">
           <label for="request" class="form-label">Special Request</label>
-          <textarea class="form-control" id="request" rows="3" placeholder="Enter any special requests"></textarea>
+          <textarea class="form-control" id="request" rows="3" placeholder="Enter any special requests" name="request"></textarea>
         </div>
         <button type="submit" class="btn btn-primary w-100">Submit Reservation</button>
       </form>
@@ -82,3 +83,14 @@
     </div>
   </footer>
   <!-- End Footer -->
+
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwhF5vSErlvPnGNlbAotL9ZHNRLbzXH2yKM6cDJQKLUeuufWTwHfr4S65yCnnv358MA/exec'
+    const form = document.forms['Reservation']
+    form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    .then(response => console.log('Success!', response))
+    .catch(error => console.error('Error!', error.message))
+    })
+    </script>
